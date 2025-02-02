@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --dot-bg: #ffffff;
+  --dot-color: rgb(0, 0, 0);
+  --dot-size: 1px;
+  --dot-space: 22px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base{
+  code {
+    @apply font-code;
+    @apply text-comment-grey;
+  }
+}
+@layer components {
+  .light .dots{
+    --dot-bg: hsla(0, 0%, 100%, 0.822);
+    --dot-color: #0E0E0E;
+  }
+  .dots {
+    --dot-color: #0E0E0E;
+    --dot-bg: #dadada;
+    --dot-bg: hsla(0, 0%, 0%, 0.8);
+    --dot-color: #aeb2ba;
+    --dot-size: 1px;
+    --dot-space: 22px;
+    background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color) !important;
+  }
+  .svgMask {
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+  }
+  .selectLng::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient_hero {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 via-black to-black;
+  }
+  .dark .gradient_hero{
+      @apply bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-white to-white;
+  }
+}
+
+
+
+@keyframes border-animation {
+  0% {
+    border-width: 2px;
+    border-color: #3490dc;
+  }
+  50% {
+    border-width: 8px;
+    border-color: #6574cd;
+  }
+  100% {
+    border-width: 2px;
+    border-color: #3490dc;
+  }
+}
+
+.animated-border {
+  animation: border-animation 2s infinite;
+}
+.light .gradient{
+  --border-color: #000000;
+  --conic-gradient: conic-gradient(from var(--angle), #d8d8d8 80%, #00000034 88%, #00000034 92%, #d8d8d8 100%);
+}
+.gradient {
+  --border-width: 1px;
+  --radius: 30px;
+  --border-color: #d8d8d8;
+  position: relative;
+  border-radius: var(--radius);
+  border: var(--border-width) solid transparent;
+}
+
+.gradient:hover::before {
+  content: " ";
+  position: absolute;
+  inset: calc(var(--border-width) * -1);
+  z-index: -1;
+  border: inherit;
+  border-radius: inherit;
+  background-image: conic-gradient(from var(--angle), #d8d8d8 80%, #00000034 88%, #00000034 92%, #d8d8d8 100%);
+  background-origin: border-box;
+  -webkit-mask:
+    linear-gradient(black, black) content-box,
+    linear-gradient(black, black);  
+  mask: linear-gradient(black, black),
+        linear-gradient(black, black);
+  -webkit-mask-clip: content-box, border-box;  
+  mask-clip: content-box, border-box;
+  -webkit-mask-composite: xor;  
+  mask-composite: exclude;
+  /* background-image: conic-gradient(from var(--angle), #381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 100%); */
+  animation: spin 7s linear infinite;
+}
+
+
+.gradient::before{
+  content: " ";
+  position: absolute;
+  inset: calc(var(--border-width) * -1);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  animation-play-state: paused;
+}
+
+
+.light .gradient:hover::before{
+  background-image: conic-gradient(from var(--angle), #000000 80%, #ffffff 88%, #ffffff 92%, #000000 100%) !important;
+    /* -webkit-mask:
+    linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) content-box,
+    linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));  
+  mask: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)),
+        linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)); */
+}
+
+
+/* .gradient{
+  border: 1px solid #d8d8d8;
+}
+.gradient:hover{
+  border: inherit;
+} */
+
+@supports not (background: paint(something)) {
+  .gradient::before {
+background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 100%);    
+  }
+}
+
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes spin {
+  to {
+    --angle: 1turn;
+  }
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+}
+
+.hero_animation{
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right,#7b1fa2,#673ab7,#f48fb1,#7b1fa2);
+  background: linear-gradient(to right, #4CE470, #6bdf86, #f48fb1 , #4CE470);
+  background: linear-gradient(to right, #1e88e5, #42a5f5, #ecdbe1 , #1e88e5);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap; 
+}
+
+@keyframes background-pan {
+  0%{
+    background-position: 0% center;
+  }
+
+  100%{
+    background-position: -200% center;
+  }
+}

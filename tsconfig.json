@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/not-found.tsx", "src/app/components/LocaleSwitcher/LocaleSwitcherSelect.jsx", "src/app/components/Header/use-dimensions.Js", "src/app/components/Hero/Code.jsx", "src/app/[locale]/layout.jsx", "src/app/[locale]/not-found.jsx", "src/app/[locale]/page.jsx", "src/app/components/Hero/Pill.ksx"],
+  "exclude": ["node_modules"]
+}

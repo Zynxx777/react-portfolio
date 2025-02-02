@@ -1,0 +1,86 @@
+{
+  "Header": {
+    "home": "início",
+    "projects": "projetos",
+    "stack": "stack",
+    "experience": "experiência",
+    "contact": "contato"
+  },
+  "LocaleSwitcher": {
+    "label": "Mudar idioma",
+    "locale": "{locale, select, pt_BR {PT} en {ENG} other {Unknown}}"
+  },
+  "Hero": {
+    "idea": "Vamos conversar",
+    "cv": "Abrir Currículo",
+    "theme": "mudar tema",
+    "front": "Desenvolvedor Front-End",
+    "iAm": "Sou",
+    "frontend": "Dev",
+    "developer": "Front-End",
+    "basedIn": "que atua",
+    "hello": "Tenho 4 anos de experiência como entusiasta de programação e 2 anos como desenvolvedor profissional trabalhando principalmente com Angular."
+  },
+  "Projects": {
+    "title": "Meus Projetos",
+    "description": "Dê uma olhada no que andei cozinhando",
+    "os": "Sistema operacional 100% online, inspirado no linux e hyprland.",
+    "disc": "Crie servidores, entre em chamadas de áudio e vídeo e envie mensagens emm tempo real.",
+    "jdm": "Concessionária fictícia especializada em carros japoneses",
+    "status": "Status do Deploy"
+  },
+  "Stack": {
+    "title": "Stack",
+    "solving": "Desenvolvendo soluções com",
+    "stack": "uma stack em contínua expansão",
+    "coding": "fazendo programa",
+    "years": "anos"
+  },
+  "Experience": {
+    "title": "Experiência Profissional",
+    "description": "jornada profissional",
+    "Front": {
+      "title": "Desenvolvedor front-end Pleno",
+      "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
+    },
+    "Intern": {
+      "title": "Estagiário de Ciência de Dados",
+      "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
+    },
+      "Responsibilities": {
+        "title": "Responsabilidades",
+        "point1": "Manter múltiplos aplicativos Angular, garantindo alto desempenho, responsividade e boa experiência do usuário por meio de testes consistentes de usabilidade e incorporação de feedback dos clientes.",
+        "point2": "Conceitualizar e implementar bibliotecas Angular reutilizáveis para agilizar o desenvolvimento e centralizar manutenções.",
+        "point3": "Projetar e desenvolver novos aplicativos para atender as necessidades administrativas dos clientes.",
+        "point4": "Normalizar dados de arquivos CSV usando Python, pandas e NumPy.",
+        "point5": "Colaborar com os membros da equipe para garantir a precisão e integridade dos dados."
+      },
+      "Achievements": {
+        "title": "Principais resultados",
+        "point1": "Desenvolvi um WebApp Angular para criação de dashboards dinâmicos semelhante ao Power BI, usando gráficos arrastáveis e redimensionáveis e dados integrados de entidades públicas como CADASTUR e IBGE.",
+        "point2": "Criei uma nova versão de um aplicativo de CRM com melhorias significativas na UI/UX, facilitando o cadastro e visualização de relacionamento entre empresas e pessoas.",
+        "point3": "Projetei e desenvolvi 6 bibliotecas Angular reutilizáveis, reduzindo o tempo de desenvolvimento em novos aplicativos e centralizando manutenções em 10 projetos."
+      },   
+    "date": {
+      "current": "Jun 2022 / Atual",
+      "intern": "Fev 2022 / Jun 2022"
+    }
+  },
+  "Cta": {
+    "title": "Vamos Conversar",
+    "subtitle": "Estou animado para aplicar minhas habilidades em seu projeto. Entre em contato para saber mais sobre como posso contribuir.",
+    "message": "mensagem",
+    "send": "enviar mensagem",
+    "message_field": "Por favor, escreva uma mensagem primeiro.",
+    "email_field": "Por favor, preencha o email corretamente primeiro.",
+    "sent": "Obrigado por entrar em contato! Envio um retorno dentro das próximas 48hrs :)",
+    "place1": "Você também pode entrar em contato",
+    "place2": "por qualquer um desses canais",
+    "find": "Me encontre no"
+  },
+  "Footer": {
+    "rights": "Todos os direitos reservados",
+    "developed": "Desenvolvido com Next.js, Tailwind, e Figma;",
+    "thanks": "obrigado"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "Header": {
+    "home": "home",
+    "projects": "projects",
+    "stack": "stack",
+    "experience": "experience",
+    "contact": "contact"
+  },
+    "LocaleSwitcher": {
+      "label": "Change language",
+      "locale": "{locale, select, pt_BR {PT} en {ENG} other {Unknown}}"
+    },
+    "Hero": {
+      "iAm": "I’m",
+      "frontend": "Front-End",
+      "developer": "Developer",
+      "hello": "I have 4+ years of experience as a coding enthusiast and 2+ years as a professional developer working mostly with Angular.",
+      "basedIn": "based in",
+      "front": "Frontend Developer",
+      "idea": "Let's talk",
+      "cv": "Open CV",
+      "theme": "change theme"
+    },
+    "Projects": {
+      "title": "My Projects",
+      "description": "Take a look at what I've been cooking",
+      "os": "Web-based operating system inspired by linux and hyprland.",
+      "disc": "Create servers, join audio and video calls, and send messages in real time.",
+      "jdm": "Fake dealership specialized in japanese cars",
+      "status": "Deploy status"
+    },
+    "Stack": {
+      "title": "Stack",
+      "solving": "Solving real problems with",
+      "stack": "an constantly expanding stack",
+      "coding": "coding",
+       "years": "years"
+   },
+   "Experience": {
+    "title": "My Experience",
+    "description": "professional journey",
+    "Front": {
+      "title": "Mid-level Front-end Developer",
+      "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
+    },
+    "Intern": {
+      "title": "Data Science Intern",
+      "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
+    },
+    "Responsibilities": {
+        "title": "Responsibilities",
+        "point1": "Develop and maintain 5+ Angular web applications, ensuring high performance, responsiveness and good user experience through regular usability testing and feedback incorporation.",
+        "point2": "Conceptualize and implement reusable Angular libraries to streamline development and centralize maintenance. ",
+        "point3": "Explore and integrate new technologies and methodologies to enhance user experience.",
+
+        "point4": "Normalizing data from CSV files using Python, pandas and NumPy.",
+        "point5": "Data extraction per Web Scraping using Beautiful Soup.",
+        "point6": "Collaboration with team members to ensure data accuracy and integrity."
+    },
+    "Achievements": {
+        "title": "Key Results",
+        "point1": "Designed and developed 6 reusable Angular libraries, reducing development time by 60% and centralizing maintenance, resulting in a more efficient workflow across 10+ projects.",
+        "point2": "Developed a dynamic dashboard web application similar to Microsoft Power BI, enabling users to create custom dashboards with flexible features for presenting data integrated from public entities like CADASTUR and IBGE.",
+        "point3": "Enhanced the UI/UX of an advanced table component with filtering, aggregation, and sorting functionalities, improving data access efficiency and user satisfaction."
+    },
+    "date": {
+      "current": "Jun 2022 / Present",
+      "intern": "Feb 2022 / Jun 2022"
+    }
+  }, 
+  "Cta": {
+    "title": "Let's talk",
+    "subtitle": "I'm excited to apply my skills to your projects. Contact me to learn more about how I can contribute.",
+    "message": "message",
+    "send": "send message",
+    "message_field": "Please fill the message field first",
+    "email_field": "Please fill the email field correctly first.",
+    "sent": "Thanks for contacting me! I well mail you back within 48hrs :)",
+    "place1": "You can also hit me up in",
+    "place2": "any of this places",
+    "find": "Find me at"
+  },
+  "Footer": {
+    "rights": "All rights reserved",
+    "developed": "Built with Next.js, Tailwind, and Figma;",
+    "thanks": "thanks"
+  }
+  }
