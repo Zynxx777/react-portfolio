@@ -14,7 +14,7 @@
       "iAm": "I’m",
       "frontend": "Front-End",
       "developer": "Developer",
-      "hello": "I have 4+ years of experience as a coding enthusiast and 2+ years as a professional developer working mostly with Angular.",
+      "hello": "Driven by curiosity and a passion for breaking, building, and optimizing systems. Skilled in full-stack and Android development, with a strong inclination toward cybersecurity, reverse engineering, and troubleshooting complex tech. Always pushing boundaries, learning new technologies, and seeking opportunities to innovate and create impactful solutions.",
       "basedIn": "based in",
       "front": "Frontend Developer",
       "idea": "Let's talk",
@@ -24,8 +24,8 @@
     "Projects": {
       "title": "My Projects",
       "description": "Take a look at what I've been cooking",
-      "os": "Web-based operating system inspired by linux and hyprland.",
-      "disc": "Create servers, join audio and video calls, and send messages in real time.",
+      "Portfolio": "react Portfolio.",
+      "Bedroom Portfolio": "personal bedroom blog portfolio.",
       "jdm": "Fake dealership specialized in japanese cars",
       "status": "Deploy status"
     },
@@ -41,16 +41,16 @@
     "description": "professional journey",
     "Front": {
       "title": "Mid-level Front-end Developer",
-      "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
+      "company": "ETECH Prowess"
     },
     "Intern": {
-      "title": "Data Science Intern",
-      "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
+      "title": "ETECH Prowess",
+      "company": "ETECH Prowess"
     },
     "Responsibilities": {
         "title": "Responsibilities",
-        "point1": "Develop and maintain 5+ Angular web applications, ensuring high performance, responsiveness and good user experience through regular usability testing and feedback incorporation.",
-        "point2": "Conceptualize and implement reusable Angular libraries to streamline development and centralize maintenance. ",
+        "point1": "Develop and maintain web applications, ensuring high performance, responsiveness and good user experience through regular usability testing and feedback incorporation.",
+        "point2": "Conceptualize and implement reusable libraries to streamline development and centralize maintenance. ",
         "point3": "Explore and integrate new technologies and methodologies to enhance user experience.",
 
         "point4": "Normalizing data from CSV files using Python, pandas and NumPy.",
@@ -59,13 +59,13 @@
     },
     "Achievements": {
         "title": "Key Results",
-        "point1": "Designed and developed 6 reusable Angular libraries, reducing development time by 60% and centralizing maintenance, resulting in a more efficient workflow across 10+ projects.",
-        "point2": "Developed a dynamic dashboard web application similar to Microsoft Power BI, enabling users to create custom dashboards with flexible features for presenting data integrated from public entities like CADASTUR and IBGE.",
+        "point1": "Designed and developed reusable libraries, reducing development time by 60% and centralizing maintenance, resulting in a more efficient workflow across 10+ projects.",
+        "point2": "Developed a dynamic dashboard web applications, enabling users to create custom dashboards with flexible features.",
         "point3": "Enhanced the UI/UX of an advanced table component with filtering, aggregation, and sorting functionalities, improving data access efficiency and user satisfaction."
     },
     "date": {
-      "current": "Jun 2022 / Present",
-      "intern": "Feb 2022 / Jun 2022"
+      "current": "aug 2024 / Present",
+      "intern": "sep 2024 / Jun 2022"
     }
   }, 
   "Cta": {
