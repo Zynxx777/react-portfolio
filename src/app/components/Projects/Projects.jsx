@@ -1,50 +1,45 @@
+import Box from './components/Box'
+import { useTranslations } from "next-intl";
+import {motion} from 'framer-motion';
+const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const item = {
+    hidden: { y: 10, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
 
-/* eslint-disable react/no-unescaped-entities */
-export default function Code(){
-       return    <div  className="relative size-full">
-        {/* <Rnd> */}
-          <div className="dark:gradient-mask-b-0 gradient-mask-b-60 p-2 pb-0 border rounded-2xl border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5 ">
-          <div className="relative overflow-hidden shadow-xl flex bg-white dark:bg-black    sm:max-h-[none] rounded-xl lg:h-[34.6875rem] xl:h-[31.625rem]  ring-1 ring-inset  ring-black/20 dark:ring-white/10 !h-auto max-h-[none]">
-              <div className="relative w-full flex flex-col">
-                <div className="flex-none border-b border-slate-500/30">
-                  <div className="flex items-center  h-8 space-x-2 px-3">
-                    <div className="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
-                    <div className="w-2.5 h-2.5 bg-yellow-300 rounded-full"></div>
-                    <div className="w-2.5 h-2.5 bg-emerald-300 rounded-full"></div>
-                  </div>
-                </div>
-                <div className="relative min-h-0 flex-auto flex flex-col">
-                  <div className="w-full flex-auto flex min-h-0 overflow-auto">
-                    <div className="w-full relative flex-auto">
-                      <pre className="flex min-h-full text-sm leading-6 xs:leading-3 xs:text-[10px] xxs:text-[8px]">
-                        <div
-                          aria-hidden="true"
-                          className="block text-slate-300 dark:text-slate-600 flex-none py-4 pr-4 text-right select-none"
-                          style={{ width: '50px' }}
-                        >
-                          {Array.from({ length: 9 }, (_, i) => (
-                            <div key={i}>{i + 1}</div>
-                          ))}
-                        </div>
-                        <code className="flex-auto relative block text-slate-200 dark:text-comment-grey-darker pt-4 pb-4 px-4 overflow-hidden ">
-      {`import Box from './components/Box'
+export default function Projects() {
+    const t = useTranslations("Projects");
 
-      export default function Projects() {     
-          const projects = [
-              {name: 'mini music player', link: 'https://zynxx777.gihub.io/mini-music-player', img: '/images/ericaugusto-os.png', description: 'a lightweight AI based music player for android', skills: ['JAVA', 'Dart', 'Kotlin', 'android studio']},
-              {name: 'business oriented website',img: '/images/discord_clone.png', link: 'https://zynxx777.github.io/darkpanZ/', description: 'a business growth focused website  :)', skills: ['bootstrap','scss','html','next', 'tailwind', 'ts']},
-              {name: 'bedroom portfolio blog', link: 'https://zynxx777.github.io/Portfolio/', img: '/images/discord_clone.png', description: 'a interactive bedroom portfolio portraying my skills and certificates', skills: ['react', 'firebase', 'redux', 'material-ui']},
-              {name: 'JDM Store', subtitle: 'under development', img: '/images/hero_section.png', link: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FjpjNX650FS4XtJrolls9RW%2FJDM%3Fpage-id%3D%26type%3Ddesign%26node-id%3D1-6%26viewport%3D741%252C598%252C0.23%26t%3DfBBVvALWC6PAzlv0-1%26scaling%3Dscale-down-width%26mode%3Ddesign', description: 'Dealership specialized in japanese cars', skills: ['angular', 'ts', 'html', 'scss', 'figma']}
-      ];  
-      return <section className="my-[180px] lg:mt-24 xs:mt-10">`}
-                        </code>
-                      </pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-        {/* </Rnd> */}
-  </div>
+    const projects = [
+      
+        {name: 'mini music player', isOnline: true, link: 'https://zynxx777.github.io/mini-music-player', img: '/images/kashi-os.png', gif: '/images/kashi-os.gif', description: t('os'), skills: ['react', 'ts', 'scss', 'figma']},
+        {name: 'bedroom portfolio', isOnline: true, img: '/images/dis', gif: '/images/discourse.gif',  link: 'https://zynxx777.github.io/Portfolio', description:t('disc'), skills: ['next', 'tailwind', 'ts']},
+        {name: 'JDM Store', subtitle: 'under development', img: '/images/hero_section.png', link: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FjpjNX650FS4XtJrolls9RW%2FJDM%3Fpage-id%3D%26type%3Ddesign%26node-id%3D1-6%26viewport%3D741%252C598%252C0.23%26t%3DfBBVvALWC6PAzlv0-1%26scaling%3Dscale-down-width%26mode%3Ddesign', description: t('jdm'), skills: ['angular', 'ts', 'html', 'scss', 'figma']}
+];
+    
+    return <motion.section initial={{opacity: 0}} animate={{opacity: 1}} className="scroll-mt-16" id='projects'>
+      <div className='flex flex-col gap-1 items-center'>
+        <h2 className="text-4xl sm:text-3xl xs:text-xl xxs:text-xl mb-3 lg:mb-1 sm:mb-0">{t('title')}</h2>
+        <label className='dark:bg-white/95 px-7 rounded-full text-center w-fit bg-accent-orange text-white dark:text-black/90 h-min flex-grow-0 lg:text-[10px] sm:text-[8px]'>{t('description')}</label>
+      </div>
+        <motion.ul variants={container} initial="hidden" whileInView="visible" viewport={{once: true}} className='grid grid-cols-3 gap-[60px] md:gap-9 lg:gap-2 my-[40px] dots md:grid-cols-1'>
+            {projects.map((project) => {
+               return <motion.li variants={item} key={project.name}>
+                    <Box  {...project}/>
+                </motion.li>
+            })}
+        </motion.ul>
+    </motion.section>
 }
