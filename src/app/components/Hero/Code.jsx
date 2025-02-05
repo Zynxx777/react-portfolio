@@ -31,8 +31,9 @@ export default function Code(){
 
       export default function Projects() {     
           const projects = [
-              {name: 'mini music player', link: 'https://zynxx777.gihub.io/mini-music-player', img: '/images/ericaugusto-os.png', description: 'My personal website with an linux rice inspired interface', skills: ['react', 'ts', 'scss', 'figma']},
-              {name: 'bedroom portfolio',img: '/images/discord_clone.png', link: 'https://zynxx777.github.io/Portfolio', description: 'Just a discord clone :)', skills: ['next', 'tailwind', 'ts']},
+              {name: 'mini music player', link: 'https://zynxx777.gihub.io/mini-music-player', img: '/images/ericaugusto-os.png', description: 'a lightweight AI based music player for android', skills: ['JAVA', 'Dart', 'Kotlin', 'android studio']},
+              {name: 'business oriented website',img: '/images/discord_clone.png', link: 'https://zynxx777.github.io/darkpanZ/', description: 'a business growth focused website  :)', skills: ['bootstrap','scss','html','next', 'tailwind', 'ts']},
+              {name: 'bedroom portfolio blog', link: 'https://zynxx777.github.io/Portfolio/', img: '/images/discord_clone.png', description: 'a interactive bedroom portfolio portraying my skills and certificates', skills: ['react', 'firebase', 'redux', 'material-ui']},
               {name: 'JDM Store', subtitle: 'under development', img: '/images/hero_section.png', link: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FjpjNX650FS4XtJrolls9RW%2FJDM%3Fpage-id%3D%26type%3Ddesign%26node-id%3D1-6%26viewport%3D741%252C598%252C0.23%26t%3DfBBVvALWC6PAzlv0-1%26scaling%3Dscale-down-width%26mode%3Ddesign', description: 'Dealership specialized in japanese cars', skills: ['angular', 'ts', 'html', 'scss', 'figma']}
       ];  
       return <section className="my-[180px] lg:mt-24 xs:mt-10">`}
