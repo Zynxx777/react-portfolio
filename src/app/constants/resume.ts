@@ -1,3 +1,3 @@
-export const resumes = {['pt-BR']: 'https://drive.google.com/file/d/13pyZCeIPRTybJW8EGZGZ5I7k6-r4xEoA/view?usp=sharing',
-    en: 'https://drive.google.com/file/d/13pyZCeIPRTybJW8EGZGZ5I7k6-r4xEoA/view?usp=sharing'
+export const resumes = {['pt-BR']: 'https://zynxx777.github.io/Portfolio/resume.html',
+    en: 'https://zynxx777.github.io/Portfolio/resume.html'
 }
