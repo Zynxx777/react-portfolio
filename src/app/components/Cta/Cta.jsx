@@ -53,7 +53,7 @@ export default function Cta(){
             {t('find')}:
             </span>
             <div className="flex gap-6 size-full py-4">
-                <a href="https://www.linkedin.com/in/Zynx" target="_blank" className="size-[90%]  duration-300  bg-[rgb(10,102,194)] transition-all hover:betterhover:opacity-70  outline rounded-[30px] p-4">
+                <a href="https://www.linkedin.com/in/Zynx/" target="_blank" className="size-[90%]  duration-300  bg-[rgb(10,102,194)] transition-all hover:betterhover:opacity-70  outline rounded-[30px] p-4">
                     <div style={{maskImage: `url("images/linkedin_cta.svg")`, maskSize: 'auto'}} className="block size-full  bg-white svgMask"></div>
                 </a>
                 <a href="https://github.com/Zynxx777" target="_blank" className="size-[90%]  bg-[rgb(1,4,9)]  duration-300 hover:betterhover:opacity-70 transition-all outline rounded-[30px] p-4">
