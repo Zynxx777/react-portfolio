@@ -84,7 +84,7 @@ const Header = () => {
                 {t('cv')}
               </a>
               <a href="https://github.com/Zynxx777" target="_blank" className='group'><span style={{maskImage: `url("/images/github_cta.svg")`}} className="block size-[18px] xs:size-3 sm:size-4 bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
-              <a href="https://www.linkedin.com/in/joshua-d8155a8228/" target="_blank" className='group'><span style={{maskImage: `url("/images/linkedin_cta.svg")`}} className="block size-[18px]  xs:size-3 sm:size-4 bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
+              <a href="https://www.linkedin.com/in/Zynx/" target="_blank" className='group'><span style={{maskImage: `url("/images/linkedin_cta.svg")`}} className="block size-[18px]  xs:size-3 sm:size-4 bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
               <a href="https://wa.me/7259987691" target="_blank" className='group'><span style={{maskImage: `url("/images/zap.svg")`}} className="block size-[18px] sm:size-4  xs:size-3 bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
             </div>
               
