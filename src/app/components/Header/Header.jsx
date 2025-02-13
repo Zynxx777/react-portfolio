@@ -60,7 +60,7 @@ const Header = () => {
                 <a href="https://github.com/Zynxx777" target="_blank" className='group'><span style={{maskImage: `url("/images/github.svg")`}} className="block mx-auto size-[18px] bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/Zynx/"  target="_blank" className='group'><span style={{maskImage: `url("/images/linkedin.svg")`}} className="block mx-auto size-[18px] bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
+                <a href="https://www.linkedin.com/in/Zynx"  target="_blank" className='group'><span style={{maskImage: `url("/images/linkedin.svg")`}} className="block mx-auto size-[18px] bg-black  dark:bg-white svgMask group-hover:opacity-80 cursor-pointer"></span> </a>
               </li> */}
             <button ref={refBtn} onClick={handleMenu} style={{maskImage: `url("/images/menu.svg")`}} className="w-6 h-6 bg-black dark:bg-white hover:opacity-60 svgMask cursor-pointer hidden md:block"></button>
 
