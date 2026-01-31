@@ -44,7 +44,7 @@ const Header = () => {
       <nav className="flex justify-between  items-center">
       {/* <div className="absolute backdrop-blur-3xl size-full top-0"></div> */}
         <a  href="#home" className="hover:opacity-80 transform scale-x-[-1] text-xl bg-black text-white dark:bg-white dark:text-black px-4 rounded-full">
-        Æ
+        7
         </a>
         <motion.div className="md:hidden">
           <SlideTabs/>
