@@ -50,8 +50,8 @@ export default function Stack() {
         <div key={i} style={{borderColor:  i % 2 == 0 ? '#7a7a7a' : '#464646'}} className="rounded-full size-3 border-solid  border-[1px]"></div>
     ))}
 </div>  */}
-<div className="grid grid-rows-2 gap-2  grid-cols-7 md:grid-cols-4 xs:grid-cols-3 xs:grid-rows-5 md:grid-rows-4 md:px-2 my-[80px]">
-    <div className="col-span-3 p-4 md:col-span-4 xs:col-span-3 font-light text-2xl 2xl:text-xl xs:text-sm   min-h-24 xs:min-h-14 bg-black/5 border-black/20 dark:bg-[#0b0b0b65] dark:border-[hsl(0,0%,9%)] border-[1px] rounded-3xl relative">
+<div className="grid grid-rows-2 gap-2  grid-cols-7 md:grid-cols-4 xs:grid-cols-3 xs:grid-rows-5 md:grid-rows-4 md:px-2 my-10">
+    <div className="col-span-3 p-3 md:col-span-4 xs:col-span-3 font-light text-2xl 2xl:text-xl xs:text-sm   min-h-20 xs:min-h-14 bg-black/5 border-black/20 dark:bg-[#0b0b0b65] dark:border-[hsl(0,0%,9%)] border-[1px] rounded-3xl relative">
         <div className="absolute md:hidden top-[14px] left-[17px] flex items-center gap-1">
             <div className="size-2 px-6 md:px-9 xs:px-6 bg-black dark:bg-white rounded-full"></div>
             <div className="size-2 px-3 md:px-6 xs:px-3 bg-black/50 dark:bg-white/50 rounded-full"></div>
@@ -63,15 +63,15 @@ export default function Stack() {
         {stack && <><span style={{color: stack.color}} className="animate-text-slide inline-block font-bold">{stack.name}</span></>}
         </h2>
     </div>
-        <div className="rounded-3xl md:hidden bg-galaxy-gradient xxs:hidden transition-all flex items-center px-3 md:saturate-100"><Image className="xs:size-16" src={'/images/milky_way.png'} width={96} height={96} alt="milky way emoji"/></div>
+        <div className="rounded-3xl md:hidden bg-galaxy-gradient xxs:hidden transition-all flex items-center px-3 md:saturate-100"><Image className="xs:size-16" src={'/images/milky_way.png'} width={128} height={128} alt="milky way emoji"/></div>
         { Object.keys(skills_imgs).map((skill) => (
         <div key={skill} onMouseLeave={() => handleStackLeave()} onMouseOver={() => handleStackHover(skills_imgs[skill])} 
-        className="rounded-3xl border-black/20 dark:border-[hsl(0,0%,9%)] border-[1px] saturate-0 transition-all betterhover:hover:saturate-100 md:saturate-100 flex-grow-0 flex items-center justify-items-center p-4 sm:p-2 min-w-[48px] min-h-[48px]">
+        className="rounded-3xl border-black/20 dark:border-[hsl(0,0%,9%)] border-[1px] saturate-0 transition-all betterhover:hover:saturate-100 md:saturate-100 flex-grow-0 flex items-center justify-items-center p-2 sm:p-2 min-w-[48px] min-h-[48px]">
           <Image 
             src={skills_imgs[skill].image} 
             alt={skills_imgs[skill].name}
-            width={32}
-            height={32}
+            width={128}
+            height={128}
             className="w-full h-full object-contain"
           />
         </div>
