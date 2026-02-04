@@ -64,7 +64,9 @@ export default function Experience() {
       t("Responsibilities.point11")
     ],
     skills: [
-      { img: "/images/skills/py.webp", name: "Python" }
+      { img: "/images/skills/java.png", name: "Java" },
+      { img: "/images/skills/kotlin.png", name: "Kotlin" },
+      { img: "/images/skills/cpp.png", name: "C++" }
     ]
   };
   
