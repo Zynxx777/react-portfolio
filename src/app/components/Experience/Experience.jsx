@@ -27,20 +27,6 @@ export default function Experience() {
     ]
   };
   
-  const internship = {
-    title: t("Intern.title"),
-    company: t("Intern.company"),
-    date: t('date.intern'),
-    obligations: [
-      t("Responsibilities.point4"),
-      t("Responsibilities.point5")
-    ],
-    skills: [
-      { img: "/images/skills/py.webp", name: "Python" },
-      { img: "/images/skills/java.png", name: "Java" }
-    ]
-  };
-  
   const itSupport = {
     title: t("ITSupport.title"),
     company: t("ITSupport.company"),
@@ -96,7 +82,6 @@ export default function Experience() {
       </div>
       <div className="flex flex-col divide-y-[1px] gap-6">
       <ExperienceCard {...experienceData} />
-      <ExperienceCard {...internship} />
       <ExperienceCard {...itSupport} />
       <ExperienceCard {...androidAAOS} />
       <ExperienceCard {...musicStudios} />
