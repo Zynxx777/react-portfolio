@@ -23,7 +23,7 @@ export default function Experience() {
       { img: "/images/skills/ts.png", name: "TypeScript" },
       { img: "/images/skills/scss.png", name: "SCSS" },
       { img: "/images/skills/git.png", name: "Git" },
-      { img: "/images/skills/figma.png", name: "Figma" },
+      { img: "/images/skills/figma.png", name: "Figma" }
     ]
   };
   

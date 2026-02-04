@@ -57,18 +57,18 @@ export const skills_imgs = {
     "name": "Java",
     "image": "/images/skills/java.png",
     "color": "#ED8B00",
-    "exp": "3+"
+    "exp": "1+"
   },
   "kotlin": {
     "name": "Kotlin",
     "image": "/images/skills/kotlin.png",
     "color": "#7F52FF",
-    "exp": "2+"
+    "exp": "1+"
   },
   "cpp": {
     "name": "C++",
     "image": "/images/skills/cpp.png",
     "color": "#00599C",
-    "exp": "2+"
+    "exp": "1+"
   }
 }

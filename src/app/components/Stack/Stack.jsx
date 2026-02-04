@@ -65,8 +65,15 @@ export default function Stack() {
     </div>
         <div className="rounded-3xl md:hidden bg-galaxy-gradient xxs:hidden transition-all flex items-center px-3 md:saturate-100"><Image className="xs:size-16" src={'/images/milky_way.png'} width={96} height={96} alt="milky way emoji"/></div>
         { Object.keys(skills_imgs).map((skill) => (
-        <div key={skill} style={{backgroundImage: `url(${skills_imgs[skill].image})`}} onMouseLeave={() => handleStackLeave()} onMouseOver={() => handleStackHover(skills_imgs[skill])} 
-        className="bg-center bg-no-repeat bg-contain rounded-3xl border-black/20  dark:border-[hsl(0,0%,9%)] border-[1px]  saturate-0 bg-origin-content transition-all  betterhover:hover:saturate-100 md:saturate-100 flex-grow-0  flex items-center justify-items-center p-6 sm:p-3">
+        <div key={skill} onMouseLeave={() => handleStackLeave()} onMouseOver={() => handleStackHover(skills_imgs[skill])} 
+        className="rounded-3xl border-black/20 dark:border-[hsl(0,0%,9%)] border-[1px] saturate-0 transition-all betterhover:hover:saturate-100 md:saturate-100 flex-grow-0 flex items-center justify-items-center p-6 sm:p-3 min-w-[60px] min-h-[60px]">
+          <Image 
+            src={skills_imgs[skill].image} 
+            alt={skills_imgs[skill].name}
+            width={40}
+            height={40}
+            className="w-full h-full object-contain"
+          />
         </div>
         ))}
 </div>

@@ -27,6 +27,8 @@
       "Portfolio": "react Portfolio.",
       "Bedroom Portfolio": "personal bedroom blog portfolio.",
       "jdm": "Fake dealership specialized in japanese cars",
+      "os": "Mini music player built with React and TypeScript.",
+      "disc": "Personal bedroom blog portfolio showcasing creative work.",
       "status": "Deploy status"
     },
     "Stack": {
