@@ -70,4 +70,5 @@ export const skills_imgs = {
     "image": "/images/skills/cpp.png",
     "color": "#00599C",
     "exp": "2+"
-  },
+  }
+}
