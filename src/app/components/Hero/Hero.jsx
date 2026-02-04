@@ -70,7 +70,7 @@ const Header = () => {
 
           {locale != 'pt-BR' && <motion.div variants={item} className="flex items-center gap-6 lg:gap-4 xs:gap-3">
               {t("basedIn")} <span className="gradient_hero">India</span>
-              <Pill src={'/images/tucano.jpg'}/>
+              <Pill src={'/images/tucano.gif'}/>
             </motion.div>}
 
           </h1>
