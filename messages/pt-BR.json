@@ -47,13 +47,33 @@
       "title": "Estagiário de Ciência de Dados",
       "company": "CONSISTE CONSULTORIA E SISTEMAS LTDA"
     },
+    "ITSupport": {
+      "title": "Engenheiro de Suporte de TI (L1)",
+      "company": "Mitel Comunications (via TeamLease)"
+    },
+    "AndroidAAOS": {
+      "title": "Desenvolvedor Android AAOS",
+      "company": "Luxoft"
+    },
+    "MusicStudios": {
+      "title": "Engenheiro de Áudio / Mixagem Ao Vivo",
+      "company": "Estúdios de Música e Eventos"
+    },
       "Responsibilities": {
         "title": "Responsabilidades",
         "point1": "Manter múltiplos aplicativos Angular, garantindo alto desempenho, responsividade e boa experiência do usuário por meio de testes consistentes de usabilidade e incorporação de feedback dos clientes.",
         "point2": "Conceitualizar e implementar bibliotecas Angular reutilizáveis para agilizar o desenvolvimento e centralizar manutenções.",
         "point3": "Projetar e desenvolver novos aplicativos para atender as necessidades administrativas dos clientes.",
         "point4": "Normalizar dados de arquivos CSV usando Python, pandas e NumPy.",
-        "point5": "Colaborar com os membros da equipe para garantir a precisão e integridade dos dados."
+        "point5": "Colaborar com os membros da equipe para garantir a precisão e integridade dos dados.",
+        "point6": "Colaboração com membros da equipe para garantir a precisão e integridade dos dados.",
+        "point7": "Forneceu suporte Técnico de Mesa e Segurança como engenheiro de suporte de TI na Mitel, uma empresa de comunicação.",
+        "point8": "Lidou com tarefas de suporte de TI, incluindo solução de problemas e manutenção através do aprendizado TeamLease.",
+        "point9": "Trabalhou no desenvolvimento do Android Automotive OS (AAOS) na Luxoft.",
+        "point10": "Enfrentou desafios com as versões mais recentes do Android 16 e 14 sendo instáveis e com bugs.",
+        "point11": "Resolveu problemas de driver com mesa e minigbm libgbm no fornecedor durante o processo de compilação.",
+        "point12": "Trabalhou em estúdios de música lidando com produção e engenharia de áudio.",
+        "point13": "Realizou mixagem ao vivo de áudio para vários eventos e locais."
       },
       "Achievements": {
         "title": "Principais resultados",
@@ -63,7 +83,10 @@
       },   
     "date": {
       "current": "Jun 2022 / Atual",
-      "intern": "Fev 2022 / Jun 2022"
+      "intern": "Fev 2022 / Jun 2022",
+      "it_support": "Função Anterior",
+      "android_aaos": "Projeto Anterior",
+      "music": "Experiência Contínua"
     }
   },
   "Cta": {

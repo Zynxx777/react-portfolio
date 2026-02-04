@@ -47,6 +47,18 @@
       "title": "ETECH Prowess",
       "company": "ETECH Prowess"
     },
+    "ITSupport": {
+      "title": "IT Support Engineer (L1)",
+      "company": "Mitel Comunications (via TeamLease)"
+    },
+    "AndroidAAOS": {
+      "title": "Android AAOS Developer",
+      "company": "Luxoft"
+    },
+    "MusicStudios": {
+      "title": "Audio Engineer / Live Mixing",
+      "company": "Music Studios & Events"
+    },
     "Responsibilities": {
         "title": "Responsibilities",
         "point1": "Develop and maintain web applications, ensuring high performance, responsiveness and good user experience through regular usability testing and feedback incorporation.",
@@ -55,7 +67,14 @@
 
         "point4": "Normalizing data from CSV files using Python, pandas and NumPy.",
         "point5": "Data extraction per Web Scraping using Beautiful Soup.",
-        "point6": "Collaboration with team members to ensure data accuracy and integrity."
+        "point6": "Collaboration with team members to ensure data accuracy and integrity.",
+        "point7": "Provided Technical Desk and Security support as IT support engineer at Mitel, a communication company.",
+        "point8": "Handled IT support tasks including troubleshooting and maintenance through TeamLease apprenticeship.",
+        "point9": "Worked on Android Automotive OS (AAOS) development at Luxoft.",
+        "point10": "Faced challenges with latest Android releases 16 and 14 being buggy and unstable.",
+        "point11": "Resolved driver issues with mesa and minigbm libgbm in vendor during build process.",
+        "point12": "Worked in music studios handling audio production and engineering.",
+        "point13": "Performed live mixing audio for various events and venues."
     },
     "Achievements": {
         "title": "Key Results",
@@ -65,7 +84,10 @@
     },
     "date": {
       "current": "aug 2024 / Present",
-      "intern": "sep 2024 / Jun 2022"
+      "intern": "sep 2024 / Jun 2022",
+      "it_support": "Previous Role",
+      "android_aaos": "Previous Project",
+      "music": "Ongoing Experience"
     }
   }, 
   "Cta": {

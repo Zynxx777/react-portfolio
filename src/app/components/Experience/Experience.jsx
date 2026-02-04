@@ -41,6 +41,43 @@ export default function Experience() {
     ]
   };
   
+  const itSupport = {
+    title: t("ITSupport.title"),
+    company: t("ITSupport.company"),
+    date: t('date.it_support'),
+    obligations: [
+      t("Responsibilities.point7"),
+      t("Responsibilities.point8")
+    ],
+    skills: [
+      { img: "/images/skills/git.png", name: "Git" }
+    ]
+  };
+  
+  const androidAAOS = {
+    title: t("AndroidAAOS.title"),
+    company: t("AndroidAAOS.company"),
+    date: t('date.android_aaos'),
+    obligations: [
+      t("Responsibilities.point9"),
+      t("Responsibilities.point10"),
+      t("Responsibilities.point11")
+    ],
+    skills: [
+      { img: "/images/skills/py.webp", name: "Python" }
+    ]
+  };
+  
+  const musicStudios = {
+    title: t("MusicStudios.title"),
+    company: t("MusicStudios.company"),
+    date: t('date.music'),
+    obligations: [
+      t("Responsibilities.point12"),
+      t("Responsibilities.point13")
+    ]
+  };
+  
 
   return (
     <section className="relative scroll-mt-16 " id="experience">
@@ -57,6 +94,9 @@ export default function Experience() {
       <div className="flex flex-col divide-y-[1px] gap-6">
       <ExperienceCard {...experienceData} />
       <ExperienceCard {...internship} />
+      <ExperienceCard {...itSupport} />
+      <ExperienceCard {...androidAAOS} />
+      <ExperienceCard {...musicStudios} />
       </div>
       {/* <div className="flex gap-28 mt-24 xl:gap-0 lg:gap-10 xl:mt-10 lg:grid lg:grid-cols-1 ">
             {experiences.map((exp,i) => (
