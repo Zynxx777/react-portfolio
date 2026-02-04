@@ -36,7 +36,9 @@ export default function Experience() {
       t("Responsibilities.point8")
     ],
     skills: [
-      { img: "/images/skills/git.png", name: "Git" }
+      { img: "/images/skills/git.png", name: "Git" },
+      { img: "/images/skills/jira.png", name: "Jira" },
+      { img: "/images/skills/otrs.png", name: "OTRS" }
     ]
   };
   
