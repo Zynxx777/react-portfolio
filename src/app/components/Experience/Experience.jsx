@@ -75,7 +75,8 @@ export default function Experience() {
     obligations: [
       t("Responsibilities.point12"),
       t("Responsibilities.point13")
-    ]
+    ],
+    skills: [] // Empty skills array to prevent mapping errors
   };
   
 
