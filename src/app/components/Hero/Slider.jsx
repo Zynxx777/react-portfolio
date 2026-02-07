@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 
 const images = [
   '/images/kashi-os.png',
-  '/images/discord_clone.png',
+  '/images/discord_clone.jpg',
   '/images/hero_section.png'
 ];
 
