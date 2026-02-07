@@ -61,11 +61,10 @@ export default function Cta(){
                 </a>
             </div>
         </div>
-        <div style={{backgroundImage: `url("images/AdobeStock_528222303.jpeg")`}} className={`${style.neon_effect} xl:hidden`}></div>
+        <div style={{backgroundImage: `url("images/bright-pop-landscape-design.jpg")`}} className={`${style.neon_effect} xl:hidden`}></div>
     </div>
         
-    </section>
-}
+    </section>}
 {/* 
 <div className="flex flex-col gap-5">
     {contact.map((info) => (
