@@ -1,16 +1,39 @@
 "use client"
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {Contact} from './components/Contact';
 import style from './Cta.module.css'
 import { useTranslations } from "next-intl";
+import { AnimatePresence, motion } from "framer-motion";
+
+const images = [
+    "images/bright-pop-landscape-design.jpg",
+    "images/discord_clone.jpg",
+    "images/kashi-os.png",
+    "images/tucano.gif",
+    "images/orla.jpg",
+    "images/discourse.gif"
+];
 
 export default function Cta(){
     const contact = ["mailto:joshuajosh3055@gmail.com", "tel:+91 7259987691", "https://github.com/Zynxx777", "https://www.linkedin.com/Zynx"];
     const [copiedLink, setCopiedLink] = useState();
     const [timeout, setTimeoutState] = useState();
+    const [currentIndex, setCurrentIndex] = useState(0);
     const t = useTranslations('Cta');
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000); // Change image every 5 seconds
+        return () => clearInterval(interval);
+    }, [currentIndex]); // Re-run when currentIndex changes to reset interval
+
+    const handleNextImage = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
     const copylink = (link, event) => {
         event.stopPropagation();
         navigator.clipboard.writeText(link.replace('mailto:', '').replace('tel:', ''));
@@ -61,7 +84,26 @@ export default function Cta(){
                 </a>
             </div>
         </div>
-        <div style={{backgroundImage: `url("images/bright-pop-landscape-design.jpg")`}} className={`${style.neon_effect} xl:hidden`}></div>
+        <div onClick={handleNextImage} className={`${style.neon_effect} xl:hidden overflow-hidden relative cursor-pointer`}>
+            <AnimatePresence initial={false}>
+                <motion.div
+                    key={currentIndex}
+                    initial={{ x: '100%' }}
+                    animate={{ x: '0%' }}
+                    exit={{ x: '-100%' }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    style={{
+                        backgroundImage: `url("${images[currentIndex]}")`,
+                        backgroundPosition: 'right',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                    }}
+                />
+            </AnimatePresence>
+        </div>
     </div>
         
     </section>}
