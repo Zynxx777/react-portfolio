@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 const images = [
   '/images/kashi-os.png',
   '/images/discord_clone.jpg',
-  '/images/channels4_banner.jpg'
+  '/images/blackhole.jpeg'
 ];
 
 const VerticalSlideshow = () => {
