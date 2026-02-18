@@ -1000,7 +1000,7 @@ export default function SmokeVisualizer() {
               {/* Visualizer Tabs */}
               <div className="flex justify-center">
                 <div className="flex items-center gap-0.5 bg-black/50 backdrop-blur-xl border border-white/10 rounded-full p-1">
-                  {VISUALIZERS.map(({ id, label, Icon }) => (
+                  {VISUALIZERS.map(({ id, labelKey, Icon }) => (
                     <button
                       key={id}
                       onClick={() => setVizMode(id)}
