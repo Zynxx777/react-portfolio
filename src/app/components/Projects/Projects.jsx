@@ -24,9 +24,11 @@ export default function Projects() {
 
     const projects = [
       
-        {name: 'mini music player', isOnline: true, link: 'https://zynxx777.github.io/mini-music-player', img: '/images/kashi-os.png', gif: '/images/kashi-os.gif', description: t('os'), skills: ['react', 'ts', 'scss', 'figma']},
+        {name: 'mini music player', isOnline: true, link: 'https://zynxx777.github.io/mini-music-player', img: '/images/illustration-tourist-attraction-city.jpg', gif: '/images/illustration-tourist-attraction-city.jpg', description: t('os'), skills: ['react', 'ts', 'scss', 'figma']},
         {name: 'bedroom portfolio', isOnline: true, img: '/images/discourse.gif', gif: '/images/discourse.gif',  link: 'https://zynxx777.github.io/Portfolio', description:t('disc'), skills: ['next', 'tailwind', 'ts']},
-        {name: 'JDM Store', subtitle: 'under development', img: '/images/hero_section.png', link: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FjpjNX650FS4XtJrolls9RW%2FJDM%3Fpage-id%3D%26type%3Ddesign%26node-id%3D1-6%26viewport%3D741%252C598%252C0.23%26t%3DfBBVvALWC6PAzlv0-1%26scaling%3Dscale-down-width%26mode%3Ddesign', description: t('jdm'), skills: ['angular', 'ts', 'html', 'scss', 'figma']}
+        {name: 'Synthwave Visualizer', subtitle: 'Interactive Experience', img: '/images/futuristic-dubai-landscape.jpg', gif: '/images/futuristic-dubai-landscape.jpg', description: t('synthwave'), skills: ['react', 'threejs', 'ts'], link: '/visualizer'},
+        {name: 'Cyberpunk 3D Room', subtitle: 'Immersive Environment', img: '/images/digital-art-beautiful-mountains.jpg', gif: '/images/digital-art-beautiful-mountains.jpg', description: t('cyberpunk'), skills: ['react', 'threejs', 'blender'], link: '/cyberpunk'},
+        {name: 'Black Hole Universe', subtitle: 'Gravitational Simulation', img: '/images/kashi-os.gif', gif: '/images/kashi-os.gif', description: 'An immersive 3D black hole simulation with 8000 gravitationally-pulled stars, audio reactivity, and cursor interaction.', skills: ['react', 'threejs', 'glsl'], link: '/blackhole'},
 ];
     
     return <motion.section initial={{opacity: 0}} animate={{opacity: 1}} className="scroll-mt-16" id='projects'>

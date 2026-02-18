@@ -27,7 +27,9 @@
     "os": "Mini player de música construído com React e TypeScript.",
     "disc": "Portfólio pessoal de blog do quarto apresentando trabalhos criativos.",
     "jdm": "Concessionária fictícia especializada em carros japoneses",
-    "status": "Status do Deploy"
+    "status": "Status do Deploy",
+    "synthwave": "Um visualizador de áudio 3D retro-futurista pulsando com batidas synthwave.",
+    "cyberpunk": "Um ambiente cyberpunk 3D imersivo e interativo."
   },
   "Stack": {
     "title": "Stack",
