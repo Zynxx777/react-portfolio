@@ -7,14 +7,18 @@ export async function GET() {
 
   try {
     const files = await fs.promises.readdir(musicDir);
-    const musicFiles = files.filter(file => file.endsWith('.mp3'));
+    const extensions = ['.mp3', '.wav', '.ogg', '.m4a', '.aac', '.flac', '.opus'];
+    const musicFiles = files.filter(file => extensions.some(ext => file.toLowerCase().endsWith(ext)));
     
     // Create a list of objects with name and path
-    const tracks = musicFiles.map((file, index) => ({
-        id: index,
-        title: file.replace('.mp3', ''), // Simple title from filename
-        path: `/music/${file}`
-    }));
+    const tracks = musicFiles.map((file, index) => {
+        const ext = path.extname(file);
+        return {
+            id: index,
+            title: path.basename(file, ext),
+            path: `/music/${file}`
+        };
+    });
 
     return NextResponse.json(tracks);
   } catch (error) {

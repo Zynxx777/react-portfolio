@@ -14,7 +14,7 @@
       "iAm": "I’m",
       "frontend": "Front-End",
       "developer": "Developer",
-      "hello": "Driven by curiosity and a passion for breaking, building, and optimizing systems. Skilled in full-stack and Android development, with a strong inclination toward cybersecurity, reverse engineering, and troubleshooting complex tech. Always pushing boundaries, learning new technologies, and seeking opportunities to innovate and create impactful solutions.",
+      "hello": "Driven by curiosity and passion for breaking, building, and optimizing systems. Skilled in full-stack and Android development, with a strong inclination towards cybersecurity, reverse engineering, and troubleshooting complex tech. Always pushing boundaries, learning new technologies, and seeking opportunities to innovate and create impactful solutions.",
       "basedIn": "based in",
       "front": "Frontend Developer",
       "idea": "Let's talk",
@@ -36,7 +36,7 @@
     "Stack": {
       "title": "Stack",
       "solving": "Solving real problems with",
-      "stack": "an constantly expanding stack",
+      "stack": "a constantly expanding stack",
       "coding": "coding",
        "years": "years"
    },
@@ -110,5 +110,21 @@
     "rights": "All rights reserved",
     "developed": "Built with Next.js, Tailwind, and Figma;",
     "thanks": "thanks"
+  },
+  "Visualizer": {
+    "enter": "Enter Visions",
+    "noTracks": "No tracks found.",
+    "ensureAudio": "Ensure audio files are in public/music/",
+    "playlist": "Playlist",
+    "tracksCount": "{count} tracks",
+    "noTrack": "No Track",
+    "terminal": "Terminal",
+    "smoke": "Smoke",
+    "classic": "Classic",
+    "space": "Space",
+    "terminalTitle": "AUDIO_ANALYZER v2.4 — SPECTRUM MONITOR",
+    "fftSpectrum": "FFT SPECTRUM [0Hz ──────────────────── 22kHz]",
+    "oscilloscope": "OSCILLOSCOPE [TIME DOMAIN]",
+    "sampleRate": "● REC  SAMPLE_RATE: 44100Hz  FFT: 512pt"
   }
-  }
+}

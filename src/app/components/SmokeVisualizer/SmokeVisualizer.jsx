@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useRef, useMemo, useEffect, useState, Suspense, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
 // ═══════════════════════════════════════════════════════
 // VISUALIZER 1: Retro OS Terminal (CRT oscilloscope)
 // ═══════════════════════════════════════════════════════
-const RetroTerminal = ({ analyserRef }) => {
+const RetroTerminal = ({ analyserRef, t }) => {
   const canvasRef = useRef(null);
   const animRef   = useRef(null);
 
@@ -81,11 +82,8 @@ const RetroTerminal = ({ analyserRef }) => {
         ctx.fill();
       });
 
-      // Title text
-      ctx.fillStyle = `rgba(0,255,80,0.8)`;
-      ctx.font = "bold 12px monospace";
       ctx.textAlign = "center";
-      ctx.fillText("AUDIO_ANALYZER v2.4 — SPECTRUM MONITOR", W/2, winY + TITLE_H/2 + 4);
+      ctx.fillText(t("terminalTitle"), W/2, winY + TITLE_H/2 + 4);
       ctx.textAlign = "left";
 
       // ── Glitch effect ──
@@ -140,10 +138,9 @@ const RetroTerminal = ({ analyserRef }) => {
         }
       }
 
-      // Spectrum label
       ctx.fillStyle = "rgba(0,255,80,0.4)";
       ctx.font = "10px monospace";
-      ctx.fillText("FFT SPECTRUM  [0Hz ──────────────────── 22kHz]", innerX, innerY + specH + 14);
+      ctx.fillText(t("fftSpectrum"), innerX, innerY + specH + 14);
 
       // ── Oscilloscope waveform (bottom half) ──
       const waveY = innerY + specH + 30;
@@ -170,10 +167,9 @@ const RetroTerminal = ({ analyserRef }) => {
       ctx.stroke();
       ctx.restore();
 
-      // Waveform label
       ctx.fillStyle = "rgba(0,255,80,0.4)";
       ctx.font = "10px monospace";
-      ctx.fillText("OSCILLOSCOPE  [TIME DOMAIN]", innerX, waveY + waveH + 14);
+      ctx.fillText(t("oscilloscope"), innerX, waveY + waveH + 14);
 
       // ── Status bar ──
       const vol = Math.round(avgVol * 100);
@@ -183,7 +179,7 @@ const RetroTerminal = ({ analyserRef }) => {
       ctx.textAlign = "right";
       ctx.fillText(`VOL: ${String(vol).padStart(3,"0")}%  PEAK: ${String(peak).padStart(3,"0")}%  T: ${time.toFixed(1)}s`, winX + winW - 20, winY + winH - 12);
       ctx.textAlign = "left";
-      ctx.fillText(`● REC  SAMPLE_RATE: 44100Hz  FFT: 512pt`, winX + 20, winY + winH - 12);
+      ctx.fillText(t("sampleRate"), winX + 20, winY + winH - 12);
 
       // CRT effects
       drawScanlines(W, H);
@@ -834,16 +830,17 @@ const IconBlackHole = () => (
 );
 
 const VISUALIZERS = [
-  { id: "bars",     label: "Terminal", Icon: IconTerminal },
-  { id: "smoke",    label: "Smoke",    Icon: IconSmoke    },
-  { id: "classic",  label: "Classic",  Icon: IconClassic  },
-  { id: "orbit",    label: "Space",    Icon: IconBlackHole},
+  { id: "bars",     labelKey: "terminal", Icon: IconTerminal },
+  { id: "smoke",    labelKey: "smoke",    Icon: IconSmoke    },
+  { id: "classic",  labelKey: "classic",  Icon: IconClassic  },
+  { id: "orbit",    labelKey: "space",    Icon: IconBlackHole},
 ];
 
 // ═══════════════════════════════════════════════════════
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════
 export default function SmokeVisualizer() {
+  const t = useTranslations("Visualizer");
   const [isPlaying,    setIsPlaying]    = useState(false);
   const [showOverlay,  setShowOverlay]  = useState(true);
   const [showPlaylist, setShowPlaylist] = useState(false);
@@ -908,6 +905,20 @@ export default function SmokeVisualizer() {
     setIsPlaying(p => !p);
   }, [isPlaying]);
 
+  // ── Keyboard Shortcuts ──
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.code === "Space") {
+        // Prevent cycling if focused on a button or inside an input
+        if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.tagName === "BUTTON") return;
+        e.preventDefault();
+        togglePlay();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [togglePlay]);
+
   const playTrack = useCallback((track) => {
     setCurrentTrack(track);
     setIsPlaying(true);
@@ -959,7 +970,7 @@ export default function SmokeVisualizer() {
             </Suspense>
           </Canvas>
         ) : vizMode === "bars" ? (
-          <RetroTerminal  analyserRef={analyserRef} />
+          <RetroTerminal  analyserRef={analyserRef} t={t} />
         ) : (
           <BlackHoleSpace analyserRef={analyserRef} />
         )}
@@ -974,7 +985,7 @@ export default function SmokeVisualizer() {
             onClick={togglePlay}
             className="group relative px-14 py-5 rounded-full border border-white/20 bg-white/5 backdrop-blur-xl text-white text-xl font-light tracking-[0.25em] uppercase hover:bg-white/15 hover:border-white/40 transition-all duration-300 shadow-[0_0_60px_rgba(100,60,255,0.35)]"
           >
-            Enter Visions
+            {t("enter")}
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </div>
@@ -998,7 +1009,7 @@ export default function SmokeVisualizer() {
                       }`}
                     >
                       <Icon />
-                      <span>{label}</span>
+                      <span>{t(labelKey)}</span>
                     </button>
                   ))}
                 </div>
@@ -1032,7 +1043,7 @@ export default function SmokeVisualizer() {
 
                 {/* Track title */}
                 <div className="text-white/40 text-[11px] font-light tracking-widest uppercase truncate flex-1">
-                  {currentTrack ? currentTrack.title : "No Track"}
+                  {currentTrack ? currentTrack.title : t("noTrack")}
                 </div>
 
                 {/* Playback controls */}
@@ -1064,8 +1075,8 @@ export default function SmokeVisualizer() {
                   {/* Playlist — opens upward */}
                   <div className={`absolute bottom-14 right-0 w-72 bg-black/92 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 ${showPlaylist ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}`}>
                     <div className="px-4 py-3 border-b border-white/10 bg-white/[0.04] flex items-center justify-between">
-                      <p className="text-white text-[11px] font-semibold tracking-widest uppercase">Playlist</p>
-                      <span className="text-white/30 text-[10px]">{playlist.length} tracks</span>
+                      <p className="text-white text-[11px] font-semibold tracking-widest uppercase">{t("playlist")}</p>
+                      <span className="text-white/30 text-[10px]">{t("tracksCount", { count: playlist.length })}</span>
                     </div>
                     <div className="max-h-64 overflow-y-auto">
                       {playlist.length > 0 ? playlist.map((track, i) => (
@@ -1082,8 +1093,8 @@ export default function SmokeVisualizer() {
                         </button>
                       )) : (
                         <div className="p-6 text-center text-white/25 text-xs italic leading-relaxed">
-                          No tracks found.<br />
-                          <span className="text-white/40 font-mono text-[10px]">public/music/*.mp3</span>
+                          {t("noTracks")}<br />
+                          <span className="text-white/40 font-mono text-[10px]">{t("ensureAudio")}</span>
                         </div>
                       )}
                     </div>

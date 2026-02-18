@@ -107,5 +107,21 @@
     "rights": "Todos os direitos reservados",
     "developed": "Desenvolvido com Next.js, Tailwind, e Figma;",
     "thanks": "obrigado"
+  },
+  "Visualizer": {
+    "enter": "Entrar nas Visões",
+    "noTracks": "Nenhuma faixa encontrada.",
+    "ensureAudio": "Certifique-se de que os arquivos de áudio estejam em public/music/",
+    "playlist": "Playlist",
+    "tracksCount": "{count} faixas",
+    "noTrack": "Nenhuma Faixa",
+    "terminal": "Terminal",
+    "smoke": "Fumaça",
+    "classic": "Clássico",
+    "space": "Espaço",
+    "terminalTitle": "ANALISADOR_DE_ÁUDIO v2.4 — MONITOR DE ESPECTRO",
+    "fftSpectrum": "ESPECTRO FFT [0Hz ──────────────────── 22kHz]",
+    "oscilloscope": "OSCILOSCÓPIO [DOMÍNIO DO TEMPO]",
+    "sampleRate": "● REC  TAXA_DE_AMOSTRAGEM: 44100Hz  FFT: 512pt"
   }
 }
