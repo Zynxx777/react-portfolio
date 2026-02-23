@@ -8,7 +8,7 @@
   },
   "LocaleSwitcher": {
     "label": "Mudar idioma",
-    "locale": "{locale, select, pt_BR {PT} en {ENG} other {Unknown}}"
+    "locale": "{locale, select, pt_BR {PT} en {ENG} kn {KN} other {Unknown}}"
   },
   "Hero": {
     "idea": "Vamos conversar",

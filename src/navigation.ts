@@ -1,7 +1,7 @@
 import {Pathnames, createLocalizedPathnamesNavigation} from 'next-intl/navigation';
 
 const localePrefix = undefined;
-export const locales = ['en', 'pt-BR']
+export const locales = ['en', 'pt-BR', 'kn']
 const pathnames = {
   '/': '/',
   '/pathnames': {

@@ -8,7 +8,7 @@
   },
     "LocaleSwitcher": {
       "label": "Change language",
-      "locale": "{locale, select, pt_BR {PT} en {ENG} other {Unknown}}"
+      "locale": "{locale, select, pt_BR {PT} en {ENG} kn {KN} other {Unknown}}"
     },
     "Hero": {
       "iAm": "I’m",
@@ -103,7 +103,7 @@
     "email_field": "Please fill the email field correctly first.",
     "sent": "Thanks for contacting me! I well mail you back within 48hrs :)",
     "place1": "You can also hit me up in",
-    "place2": "any of this places",
+    "place2": "any of these places",
     "find": "Find me at"
   },
   "Footer": {
